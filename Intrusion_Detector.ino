@@ -2,10 +2,10 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 
-const char* ssid = "prabal"; 
-const char* password = "manhas99";
+const char* ssid = ""; 
+const char* password = "";
 const char *host = "maker.ifttt.com";
-const char *privateKey = "lp_wGOe2d9U7LnTY2P6QD5RZd83raEH4jBC25pEkTAE";
+const char *privateKey = "";
 ESP8266WebServer server(80); //Server on port 80
 void send_event(const char *event);
 int buzzer = 14;   //Buzzer  alarm  connected to GPIO-14 or D5 of nodemcu
@@ -147,9 +147,9 @@ void send_event(const char *event)
     return;
   } 
   // We now create a URI for the request
-  String url = "https://maker.ifttt.com/trigger/motion_event/json/with/key/lp_wGOe2d9U7LnTY2P6QD5RZd83raEH4jBC25pEkTAE";
+  String url = "";
   url += event;
-  url += "lp_wGOe2d9U7LnTY2P6QD5RZd83raEH4jBC25pEkTAE";
+  url += "";
   url += privateKey; 
   Serial.print("Requesting URL: ");
   Serial.println(url);  
